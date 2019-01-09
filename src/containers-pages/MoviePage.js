@@ -49,7 +49,7 @@ export class MoviePage extends React.Component {
             className="btn btn-secondary btn-sm w-50"
             onClick={() => AddToWatchLater(props.movie)}
           >
-            Watch later
+            Watch Later
           </button>
         );
       }
@@ -60,7 +60,7 @@ export class MoviePage extends React.Component {
             className="btn btn-secondary btn-sm w-50"
             onClick={() => AddToWatchLater(props.movie)}
           >
-            Remove from list
+            Remove From List
           </button>
         );
       }
@@ -94,7 +94,7 @@ export class MoviePage extends React.Component {
                   type="button"
                   class="btn btn-info w-50"
                 >
-                  Edit
+                  {this.state.edit === "none" ? "Edit" : "Cancel Edit"}
                 </button>
                 <ButtonWatch movies={movies} movie={movie} />
               </div>
@@ -162,7 +162,7 @@ export class MoviePage extends React.Component {
                 type="button"
                 class="btn btn-success"
               >
-                Send Changes
+                Save Changes
               </button>
 
               <button
