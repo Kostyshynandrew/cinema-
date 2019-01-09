@@ -6,6 +6,7 @@ import Movie from "../components/Movie";
 
 // https://blog.benestudio.co/5-ways-to-connect-redux-actions-3f56af4009c8
 
+// https://stackoverflow.com/questions/11128464/git-upload-pack-command-not-found
 export class MoviesPage extends React.Component {
   componentDidMount() {
     this.props.dispatch(fetchProducts());

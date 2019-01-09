@@ -30,7 +30,11 @@ export class MoviePage extends React.Component {
   }
 
   checkIt(movie) {
-    return this.setState({ editMovie: movie, edit: "block" });
+    if (this.state.edit === "none") {
+      return this.setState({ editMovie: movie, edit: "block" });
+    } else {
+      return this.setState({ edit: "none" });
+    }
   }
 
   render() {
@@ -56,7 +60,7 @@ export class MoviePage extends React.Component {
             className="btn btn-secondary btn-sm w-50"
             onClick={() => AddToWatchLater(props.movie)}
           >
-            Remove
+            Remove from list
           </button>
         );
       }
@@ -85,8 +89,13 @@ export class MoviePage extends React.Component {
                 </div>
               </div>
               <div className="Single_Movie_Bottom">
-                <button onClick={() => this.checkIt(movie)}>Edit</button>
-
+                <button
+                  onClick={() => this.checkIt(movie)}
+                  type="button"
+                  class="btn btn-info w-50"
+                >
+                  Edit
+                </button>
                 <ButtonWatch movies={movies} movie={movie} />
               </div>
             </div>
@@ -140,8 +149,8 @@ export class MoviePage extends React.Component {
                   onChange={this.handleChange.bind(this)}
                 />
               </div>
+
               <button
-                type="button"
                 onClick={e => {
                   e.preventDefault();
 
@@ -150,14 +159,18 @@ export class MoviePage extends React.Component {
                     this.state.editMovie
                   );
                 }}
-              >
-                Send
-              </button>
-              <button
                 type="button"
-                onClick={() => this.setState({ edit: "none" })}
+                class="btn btn-success"
               >
-                Cancel
+                Send Changes
+              </button>
+
+              <button
+                onClick={() => this.setState({ edit: "none" })}
+                type="button"
+                class="btn btn-dark"
+              >
+                Cancel Edit
               </button>
             </form>
           </div>

@@ -42,12 +42,15 @@ export function Product({ product, AddToWatchLater, movies }) {
               <h5 className="text-dark">{product.name}</h5>
             </div>
           </div>
+          <div>
+            <h5 className="text-dark">Film length ({product.price} min)</h5>
+          </div>
         </div>
       </Link>
       <div className="Single_Movie_Bottom">
         <Link className="w-50" to={`/products/${product.id}`}>
-          <button type="button" className="btn btn-primary btn-sm w-100">
-            Edit
+          <button type="button" class="btn btn-info w-100">
+            Info
           </button>
         </Link>
 

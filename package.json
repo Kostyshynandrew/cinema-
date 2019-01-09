@@ -2,7 +2,7 @@
   "name": "cinema-",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Kostyshynandrew.github.io/Movie",
+  "homepage": "http://Kostyshynandrew.github.io/cinema-",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.7.0",
