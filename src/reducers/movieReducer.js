@@ -56,7 +56,6 @@ export default function movieReducer(state = initialState, action) {
         items: []
       };
     case CHANGE_SEARCHTEXT:
-      console.log(action.payload);
       return {
         ...state,
         searchText: action.payload
