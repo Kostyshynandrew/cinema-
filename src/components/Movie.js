@@ -49,7 +49,7 @@ export function Product({ product, AddToWatchLater, movies }) {
       </Link>
       <div className="Single_Movie_Bottom">
         <Link className="w-50" to={`/products/${product.id}`}>
-          <button type="button" class="btn btn-info w-100">
+          <button type="button" className="btn btn-info w-100">
             Info
           </button>
         </Link>

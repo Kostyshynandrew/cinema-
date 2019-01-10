@@ -1,4 +1,4 @@
-import { ADD_MOVIE, REMOVE_MOVIE } from "../actions/watchLaterAction";
+import { ADD_MOVIE } from "../actions/watchLaterAction";
 
 const initialState = {
   items: [],
@@ -22,9 +22,6 @@ export default function movieReducer(state = initialState, action) {
       } else {
         return state;
       }
-
-    // case REMOVE_MOVIE:
-    //   return { ...state, items: state.items.push(action.payload.products) };
 
     default:
       return state;

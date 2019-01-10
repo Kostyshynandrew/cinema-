@@ -40,7 +40,6 @@ export class MoviePage extends React.Component {
   render() {
     const { error, loading, movie, movies, AddToWatchLater } = this.props;
     function ButtonWatch(props) {
-      console.log(props.movie);
       const isHere = props.movies.find(movie => movie.id === props.movie.id);
       if (!isHere) {
         return (
@@ -64,7 +63,7 @@ export class MoviePage extends React.Component {
           </button>
         );
       }
-      return <div>dhasudyasdgu</div>;
+      return <div>dhasudyasdgu!!</div>;
     }
 
     if (error) {
@@ -92,7 +91,7 @@ export class MoviePage extends React.Component {
                 <button
                   onClick={() => this.checkIt(movie)}
                   type="button"
-                  class="btn btn-info w-50"
+                  className="btn btn-info w-50"
                 >
                   {this.state.edit === "none" ? "Edit" : "Cancel Edit"}
                 </button>
@@ -160,7 +159,7 @@ export class MoviePage extends React.Component {
                   );
                 }}
                 type="button"
-                class="btn btn-success"
+                className="btn btn-success"
               >
                 Save Changes
               </button>
@@ -168,7 +167,7 @@ export class MoviePage extends React.Component {
               <button
                 onClick={() => this.setState({ edit: "none" })}
                 type="button"
-                class="btn btn-dark"
+                className="btn btn-dark"
               >
                 Cancel Edit
               </button>

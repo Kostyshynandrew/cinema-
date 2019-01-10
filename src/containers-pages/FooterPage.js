@@ -7,7 +7,7 @@ export class FooterPage extends React.Component {
       <footer className="page-footer font-small special-color-dark pt-4">
         <div className=" text-center py-3">
           © 2018 Copyright:
-          <a href="#"> Kombo</a>
+          <Link to=""> Kombo </Link>
         </div>
       </footer>
     );
