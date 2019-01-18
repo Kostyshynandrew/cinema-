@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { AddToWatchLater } from "../actions/watchLaterAction";
 
-export function MovieWatchLater({ movie }) {
+export function MovieWatchLater({ movie, AddToWatchLater }) {
   return (
     <div className="Single_Movie_Edit">
       <div style={{ width: "300px" }}>
@@ -18,7 +18,7 @@ export function MovieWatchLater({ movie }) {
         </div>
         <div className="Single_Movie_Bottom">
           <button
-            onClick={() => this.props.dispatch(AddToWatchLater(movie))}
+            onClick={() => AddToWatchLater(movie)}
             type="button"
             className="btn btn-dark"
           >

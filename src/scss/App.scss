@@ -1,0 +1,174 @@
+@import 'mixin';
+html{
+  @include media((
+    font-size:(575 : 14px) 
+    ));
+
+}
+a{
+   text-decoration: none !important;
+   
+}
+.App {
+  justify-content: center;
+  display: flex;
+}
+.App_Cover{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.Cover{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+}
+.All_Movies{
+  flex: 1;
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include media((
+    width: (all: 95%, lg - 1250: 1001px , md - 1024: 750px, 575 - md: 501px, 575 : 250px),
+    justify-content:(575 : center)
+        
+    ));
+}
+.Single_Movie{
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  margin: 10px 5px;
+  text-align: center; 
+
+}
+
+.Single_Movie_Name{
+    width: 100%;
+    align-content: center;
+    display: flex;
+    height: 50px;
+    text-align: center;
+    div{
+      display: flex;
+      margin: auto;
+    }
+
+}
+ .Single_Movie_Bottom{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.Single_Movie_Edit{
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  margin: 10px auto;
+  justify-content: center;
+  @include media((
+    flex-direction:(md : column),  
+    align-items:(md: center)  
+    ));
+  img{
+    width: 300px;
+    height: 425px;
+  } 
+  div:first-child{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.Single_Movie_Description{
+  margin-left: 20px;
+  max-width: 700px;
+  text-align: justify;
+  @include media((
+    
+    margin-left:(md : 0),
+        
+    ));
+}
+.Edit_Movie{
+  width: 95%;
+  max-width: 1020px;
+  margin: auto;
+}
+
+.Header_Page{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  h2{
+    margin: 0
+  }
+
+  .Header_Page_Cover{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @include media((
+    flex-direction: (585 : column ),
+    align-items: (585: flex-start)       
+    ));
+  }
+
+  .Header_Page_Cover_Left{
+    width: 45%;
+    min-width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    @include media((
+    flex-direction: (md: column ),
+           
+    ));
+     
+    a{
+      @include media((
+      margin: (md: 5px 0 5px 0 ),
+           
+    ));
+    }
+  }
+
+   .Header_Page_Cover_Right{
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include media((
+    flex-direction: (md: column-reverse ),
+    align-items:(md: flex-end, 585: flex-start )      
+    ));
+    a{
+      @include media((
+      margin: (lg: 0 0 0 5px ,md: 5px 0 5px 0, 585: 5px 0 5px 0 ),
+           
+    ));
+    }
+  }
+}
+
+// .Footer_Page{
+//   display: flex;
+//   margin: auto 0 0 0;
+//   align-self: flex-end;
+//   justify-self: end;
+//   height: 50px;
+//   width: 100%;
+  
+// }
